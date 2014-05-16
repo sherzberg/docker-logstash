@@ -2,11 +2,23 @@
 
 Logstash 1.4.1
 
+Build the container
 
-* `docker build -t logstash .`
-* `docker run logstash`
- or with an external elasticsearch
-* `docker run -e ES_HOST=1.2.3.4 -e ES_PORT=9300 logstash`
+```bash
+$ docker build -t sherzberg/logstash .
+```
+
+Run Embedded Elasticsearch:
+
+```bash
+$ docker run sherzberg/logstash
+```
+
+Run with external Elasticsearch:
+
+```bash
+$ docker run -e ES_HOST=1.2.3.4 -e ES_PORT=9300 logstash
+```
 
 Ports
 
