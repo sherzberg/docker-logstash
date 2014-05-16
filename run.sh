@@ -1,4 +1,5 @@
 #!/bin/bash
+
 CFG=${CFG:-}
 ES_HOST=${ES_HOST:-127.0.0.1}
 ES_PORT=${ES_PORT:-9300}
@@ -19,7 +20,7 @@ input {
   }
 }
 output {
-  stdout { debug => true debug_format => "json"}
+  stdout { codec => rubydebug }
 EOF
     if [ "$EMBEDDED" = "true" ]; then
         cat << EOF >> /opt/logstash.conf
@@ -34,4 +35,4 @@ EOF
    fi
 fi
 
-java -jar /opt/logstash.jar agent -f /opt/logstash.conf -- web --backend elasticsearch://$ES_HOST:$ES_PORT/
+/opt/logstash/bin/logstash agent -f /opt/logstash.conf -- web
