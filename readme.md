@@ -1,6 +1,6 @@
 # Logstash
 
-Logstash 1.1.13
+Logstash 1.4.1
 
 
 * `docker build -t logstash .`
