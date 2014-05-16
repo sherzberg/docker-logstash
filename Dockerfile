@@ -1,4 +1,4 @@
-FROM base
+FROM sherzberg/oracle-java7
 MAINTAINER Arcus "http://arcus.io"
 RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
