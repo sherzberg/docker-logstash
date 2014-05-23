@@ -43,7 +43,7 @@ output {
 
 You can create a fully custom logstash config. This config file will be used when 
 Logstash starts Also, any environment variable will be replaced! Just use 
-`{ENV_VARIABLE_NAME}` in the config.
+`${ENV_VARIABLE_NAME}` in the config.
 
 Ports
 
