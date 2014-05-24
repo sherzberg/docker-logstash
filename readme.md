@@ -52,3 +52,14 @@ Ports
 * 9292 (logstash ui)
 * 9300 (embedded elasticsearch if no external specified)
 * 12201 (gelf input)
+
+Sample
+------
+
+The `sample` folder has an example of what you can do with the overriding the 
+default logstash config.
+
+```bash
+$ cd sample
+$ docker build -t logstash-sample .
+$ docker run -i -v templates:/opt/templates -t logstash-sample
