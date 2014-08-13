@@ -3,7 +3,7 @@ MAINTAINER Spencer Herzberg "spencer.herzberg@gmail.com"
 
 WORKDIR /opt
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu saucy main universe multiverse" > /etc/apt/sources.list
 
 RUN apt-get update -qq
 RUN sudo apt-get install -y wget python
